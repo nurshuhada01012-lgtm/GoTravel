@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Travel</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fefaf6; /* soft cream background */
+            color: #4a4a4a; /* soft dark gray text */
+        }
+
+        header {
+            background: url('DestinationTravel.jpg') no-repeat center center;
+            background-size: cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 60px 20px; /* reduced padding for smaller header */
+        }
+
+        header h1 {
+            font-size: 2.5em; /* smaller font size */
+            margin: 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+        }
+
+        nav {
+            background-color: #a3d2ca; /* soft teal */
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            margin: 20px;
+            border-radius: 10px;
+            background-color: white; /* soft white */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* softer shadow */
+        }
+
+        section img {
+            max-width: 400px;
+            width: 100%;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        section div {
+            max-width: 500px;
+            margin: 10px;
+        }
+
+        section h2 {
+            margin-top: 0;
+            color: #6c757d; /* soft grayish color */
+        }
+
+        button {
+            background-color: #ffe5b4; /* soft peach */
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            color: #4a4a4a;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #ffd19a; /* slightly darker on hover */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #a3d2ca; /* match nav soft teal */
+            color: #fff;
+        }
+
+        @media(max-width: 768px) {
+            section {
+                flex-direction: column;
+            }
+
+            section img, section div {
+                max-width: 90%;
+            }
+        }
+.button-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: orange; 
+      color: white;             /* Text color */
+      text-decoration: none;    /* Remove underline */
+      border-radius: 5px;       /* Rounded corners */
+      font-size: 16px;
+      transition: background-color 0.3s; /* Smooth hover */
+    }
+
+    /* Hover effect */
+    .button-link:hover {
+      background-color: orange;
+    }
+    </style>
+</head>
+<body>
+<div data-role="page" id="homePage">
+    <header>
+        <h1>Welcome To Go Travel</h1>
+    </header>
+
+    <nav>
+	<a href="log in.html">Log In</a>
+       <a href="#destinations">Home</a>
+	<a href="booking.html">Booking</a>
+
+    </nav>
+
+
+
+    <section id="destinations">
+        <img src="DestinationTravel.jpg" alt="Destinations">
+        <div>
+            <h2>Explore Amazing Places</h2>
+            <p>Discover hidden gems and popular travel spots around the world. From sunny beaches to snowy mountains, adventure awaits!</p>
+           <a href=Gallery.html class="button-link">View Destination</a>
+
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Go Travel. All Rights Reserved.
+    </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+</body>
+</html>

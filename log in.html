@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>GoTravel - Login</title>
+
+    <!-- jQuery + jQuery Mobile -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        .center-logo{
+            text-align:center;
+            margin-top:30px;
+            margin-bottom:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- PAGE 1: LOGIN PAGE -->
+<div data-role="page" id="loginPage">
+
+    <div data-role="header">
+        <h1>GoTravel</h1>
+    </div>
+
+    <div data-role="content">
+
+        <div class="center-logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/201/201623.png" width="120">
+        </div>
+
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+
+            <button type="submit" data-role="button" data-theme="b">Login</button>
+        </form>
+
+        <p class="text-center" style="text-align:center;margin-top:12px;">
+            <a href="#forgotPage" data-transition="slide">Forgot Password?</a>
+        </p>
+
+    </div>
+
+    <div data-role="footer">
+        <h4>GoTravel 2025</h4>
+    </div>
+</div>
+
+
+
+<!-- PAGE 2: FORGOT PASSWORD -->
+<div data-role="page" id="forgotPage">
+
+    <div data-role="header">
+        <a href="#loginPage" data-role="button" data-icon="back" data-transition="slide">Back</a>
+        <h1>Reset Password</h1>
+    </div>
+
+    <div data-role="content">
+
+        <form id="forgotForm">
+            <label for="fp-email">Enter Your Email</label>
+            <input type="email" id="fp-email" placeholder="example@email.com">
+
+            <button type="submit" data-role="button" data-theme="b">Send Reset Link</button>
+        </form>
+
+    </div>
+
+    <div data-role="footer">
+        <h4>GoTravel 2025</h4>
+    </div>
+</div>
+
+
+
+<!-- JAVASCRIPT VALIDATION -->
+<script>
+    // LOGIN VALIDATION
+    document.getElementById("loginForm").addEventListener("submit", function(e){
+        e.preventDefault();
+
+        let user = document.getElementById("username").value.trim();
+        let pass = document.getElementById("password").value.trim();
+
+        if(user === ""){
+            alert("Username cannot be empty.");
+            return;
+        }
+        if(pass === ""){
+            alert("Password cannot be empty.");
+            return;
+        }
+
+        alert("Login successful!");
+       window.location.href = "Home Page.html";
+    });
+
+    // FORGOT PASSWORD VALIDATION
+    document.getElementById("forgotForm").addEventListener("submit", function(e){
+        e.preventDefault();
+
+        let email = document.getElementById("fp-email").value.trim();
+
+        if(email === ""){
+            alert("Please enter your email.");
+            return;
+        }
+
+        if(!email.includes("@")){
+            alert("Invalid email format.");
+            return;
+        }
+
+        alert("A password reset link has been sent to your email.");
+    });
+</script>
+
+</body>
+</html>
